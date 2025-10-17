@@ -1,0 +1,349 @@
+/* custom css */
+:root {
+  /* colors */
+  --primary-color: #ffffff;
+  --theme-color-1: #9850ff;
+  --theme-color-2: #304279;
+  --theme-color-3: #ffc4fb;
+  --theme-color-4: #fffbdb;
+  --theme-color-5: #ffedfe;
+  --theme-color-6: #ffde59;
+  --theme-color-7: #f3af26;
+
+  /* gradients */
+  --bg-gradient-1: linear-gradient(
+    90deg,
+    var(--theme-color-1),
+    var(--theme-color-2)
+  );
+  --bg-gradient-2: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--theme-color-3)
+  );
+  --bg-gradient-3: linear-gradient(
+    90deg,
+    var(--theme-color-4),
+    var(--theme-color-5)
+  );
+  --bg-gradient-4: linear-gradient(
+    90deg,
+    var(--theme-color-5),
+    var(--theme-color-4)
+  );
+  --bg-gradient-5: linear-gradient(
+    90deg,
+    var(--theme-color-2),
+    var(--theme-color-1)
+  );
+
+  /* fonts */
+  --primary-font: "Poppins", sans-serif;
+
+  /* Base font */
+  --primary-font-size: clamp(0.9rem, 1vw + 0.5rem, 1.125rem);
+
+  /* Headings */
+  --h1-font-size: clamp(2rem, 5vw + 1rem, 3.5rem);
+  --h2-font-size: clamp(1.75rem, 4vw + 0.5rem, 3rem);
+  --h3-font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
+  --h4-font-size: clamp(1.25rem, 2.5vw + 0.25rem, 2rem);
+  --h5-font-size: clamp(1.1rem, 2vw, 1.5rem);
+  --h6-font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--primary-font-size);
+  color: var(--primary-color);
+  max-width: 1440px;
+  min-width: 320px;
+}
+
+/* hero-sec */
+#hero-sec {
+  background: var(--bg-gradient-1);
+}
+
+#hero-sec img {
+  object-fit: fill;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-text-content .hero-hl {
+  color: #f3af26;
+}
+
+@media (max-width: 991px) {
+  #hero-sec .hero-row{
+    flex-direction: column-reverse;
+  }
+}
+/* brand-sec */
+#brand-sec {
+  background-color: #f8f9fa; /* light gray section */
+}
+
+#brand-sec img {
+  max-height: 100px;
+  transition: 0.3s ease;
+}
+
+#brand-sec img:hover {
+  transform: scale(1.1);
+  filter: none;
+}
+
+/* trust section */
+#trust-sec {
+  background: var(--bg-gradient-2);
+}
+
+#trust-sec h2 {
+  color: #2d2d2d;
+  font-size: var(--h4-font-size);
+}
+
+#trust-sec p {
+  color: #444;
+  font-size: var(--primary-font-size);
+  line-height: 1.7;
+}
+
+#trust-sec strong {
+  color: #000;
+  font-weight: 600;
+}
+
+/* Contact Section */
+#contact-sec {
+  background-color: #8f65fd;
+  color: #fff;
+}
+
+#contact-sec .form-control {
+  background-color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px !important;
+  font-size: var(--primary-font-size);
+  color: #333;
+  height: 100%;
+}
+
+#contact-sec .form-control::placeholder {
+  color: #999;
+  font-size: var(--primary-font-size);
+}
+
+#contact-sec textarea.form-control {
+  border-radius: 25px;
+  resize: none;
+}
+
+#contact-sec #submit-btn {
+  background-color: #ffde59;
+  color: #000;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 10px 30px !important;
+  border: none;
+  transition: 0.3s ease;
+}
+
+#contact-sec #submit-btn:hover {
+  background-color: #ffcc00;
+}
+
+#contact-sec img {
+  object-fit: cover;
+  height: 100%;
+}
+
+@media (max-width: 991px) {
+  #contact-sec img {
+    display: none;
+  }
+}
+
+/* Courses Section */
+#courses-sec {
+  background: var(--bg-gradient-3);
+}
+
+#courses-sec h2 {
+  font-size: var(--h1-font-size); 
+  color: #2d2d2d;
+}
+
+#courses-sec .training-text {
+  color: #e578a2;
+  font-weight: 600;
+}
+
+#courses-sec p.lead {
+  color: #666;
+  font-size: var(--primary-font-size);
+}
+
+#courses-sec .card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#courses-sec .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+#courses-sec .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+#courses-sec .card-title {
+  color: #333;
+  font-weight: 600;
+  font-size: var(--h6-font-size);
+}
+
+/* Shine Section */
+#shine-sec {
+  background: var(--bg-gradient-4);
+}
+
+#shine-sec .shine-title {
+  color: #f3af26;
+  font-size: var(--h1-font-size);
+}
+
+#shine-sec h4 {
+  font-size: var(--h4-font-size);
+  color: #2d2d2d;
+}
+
+#shine-sec p {
+  color: #555;
+  font-size: var(--primary-font-size);
+  line-height: 1.7;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+#shine-sec .btn-learn {
+  background-color: #ff4c91;
+  color: #fff;
+  border-radius: 50px;
+  transition: 0.3s ease;
+  border: none;
+}
+
+#shine-sec .btn-learn:hover {
+  background-color: #f03e82;
+}
+
+#shine-sec img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+@media (max-width: 991px) {
+  #shine-sec .row {
+    flex-direction: column-reverse;
+  }
+}
+
+/* Instant Training Section */
+#instant-training {
+  background: var(--bg-gradient-5);
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
+}
+
+#instant-training h2 {
+  color: #fff;
+  font-size: var(--h1-font-size);
+}
+
+#instant-training .title {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+#instant-training .sub-title {
+  color: #ffde59;
+  font-size: var(--h5-font-size);
+  font-weight: 500;
+}
+
+#instant-training .form-card {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#instant-training .form-card h3 {
+  font-size: var(--h5-font-size);
+  font-weight: 600;
+}
+
+#instant-training .form-control {
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: var(--primary-font-size);
+}
+
+#instant-training .form-control::placeholder {
+  color: #999;
+  font-size: var(--primary-font-size);
+}
+
+#instant-training .submit-btn {
+  background-color: #00bf63;
+  color: #f1ec71;
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-weight: 600;
+  border: none;
+  transition: 0.3s ease;
+  text-align: left;
+}
+
+#instant-training .submit-btn:hover {
+  background-color: #009f52;
+  color: #fff;
+}
+
+#instant-training img {
+  max-width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  #instant-training .position-absolute {
+    margin-top: 20px;
+  }
+  #instant-training h2,
+  #instant-training .sub-title {
+    text-align: center;
+  }
+  #instant-training .insttr-main-row {
+    flex-direction: column-reverse;
+  }
+}
+
+/* 900: #9850ff, #304279 */
+/* 900: #ffffff, #ffc4fb */
+/* #8f65fd */
+/* 900: #fffbdb, #ffecfe */
+/* 900: #ffedfe, #fffceO */
+/* 900: #304279, #9850ff */
